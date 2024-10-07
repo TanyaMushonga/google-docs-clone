@@ -88,7 +88,7 @@ const CollaborativeRoom = ({
                   placeholder="Enter title"
                   onChange={(e) => setDocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
-                  disable={!editing}
+                  disabled={!editing}
                   className="document-title-input"
                 />
               ) : (
