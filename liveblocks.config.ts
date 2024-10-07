@@ -3,16 +3,10 @@
 declare global {
   interface Liveblocks {
     // Each user's Presence, for useMyPresence, useOthers, etc.
-    Presence: {
-      // Example, real-time cursor coordinates
-      // cursor: { x: number; y: number };
-    };
+    Presence: object;
 
     // The Storage tree for the room, for useMutation, useStorage, etc.
-    Storage: {
-      // Example, a conflict-free list
-      // animals: LiveList<string>;
-    };
+    Storage: object;
 
     // Custom user info set when authenticating with a secret key
     UserMeta: {
@@ -28,24 +22,16 @@ declare global {
     };
 
     // Custom events, for useBroadcastEvent, useEventListener
-    RoomEvent: {};
+    RoomEvent: object;
       // Example has two events, using a union
       // | { type: "PLAY" } 
       // | { type: "REACTION"; emoji: "🔥" };
 
     // Custom metadata set on threads, for useThreads, useCreateThread, etc.
-    ThreadMetadata: {
-      // Example, attaching coordinates to a thread
-      // x: number;
-      // y: number;
-    };
+    ThreadMetadata: object;
 
     // Custom room info set with resolveRoomsInfo, for useRoomInfo
-    RoomInfo: {
-      // Example, rooms with a title and url
-      // title: string;
-      // url: string;
-    };
+    RoomInfo: object;
   }
 }
 
